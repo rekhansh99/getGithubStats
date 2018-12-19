@@ -25,17 +25,16 @@ xht.send();
 var j=0;
 for(j=0;j<reponame.length;j++)
 {
-    var url2 = url + reponame[j] + "/stats/participation";
-    console.log(url2);
+    var m = JSON.stringify(reponame[j]);
+    var url2 = url + m + "/stats/participation";
     const xhr = new XMLHttpRequest();
     xhr.onload = function () {
     if (xhr.readyState === 4 && xhr.status == "200") {
-        let commit = JSON.parse(xhr.responseText);
+        let commit = JSON.parse(xhr.responseText).owner;
         var k = 0;
-        var len = commit.owner.length;
+        var len = commit.length;
         for (; k< len; ) { 
         weekCommits[k] += repos.owner[k];
-        console.log(weekCommits[k])
         k++;} 
     } else{
         console.log("error");
