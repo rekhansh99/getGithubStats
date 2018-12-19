@@ -35,7 +35,7 @@ for(j=0;j<reponame.length;j++)
         var len = commit.owner.length;
         for (; k< len; ) { 
         weekCommits[k] += repos.owner[k];
-        console.log(weekCommits[z])
+        console.log(weekCommits[k])
         k++;} 
     } else{
         console.log("error");
