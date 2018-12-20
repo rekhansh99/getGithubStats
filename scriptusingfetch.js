@@ -24,7 +24,7 @@ fetch(url1)
         .then(function(data){
         const owns = data.owner;
         for(let y=0;y<owns.length;y++){
-           week[y] += owns[y]; 
+           week[y] = owns[y]; 
         }
         });
     }
