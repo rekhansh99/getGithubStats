@@ -25,7 +25,7 @@ for(let x=0;x<reponame.length;x++) //to find weekly commits
     })
     .then(function(data){
     var owns = data.owner;
-    for(let x=0;x<owns.len;x++){
+    for(let x=0;x<owns.length;x++){
        week[x] += owns[x]; 
     }
     });
